@@ -28,7 +28,6 @@ body {
 /* LAYOUT
 /*******************************************/
 header {
-  border: 2px solid green;
 }
 
 nav {
@@ -48,7 +47,7 @@ nav > a img {
 nav .nav-list {
   display: flex;
   margin: 0;
-  padding: 1.2rem 0;
+  padding: 1.5rem 0;
 }
 
 .nav-list .nav-item {
@@ -61,24 +60,24 @@ nav .nav-list {
   height: 100%;
   text-decoration: none;
   color: black;
-  /* font-weight: bold; */
 }
 
 .landing-page {
   height: calc(100vh);
   position: relative;
+  border: 1px solid transparent;
 }
 
 .landing-page::after {
   content: " ";
   position: absolute;
-  top: -3rem;
+  top: -4rem;
   right: 0;
-  width: 40%;
-  height: calc(100% + 3rem);
+  width: 100%;
+  height: calc(100% + 4rem);
   z-index: -1;
-  background-image: url(https://i.ibb.co/DgPp0gB/IMG-0982.jpg);
-  background-position: center;
+  background-image: url(../images/IMG-0982.jpg);
+  background-position: top;
   background-size: cover;
 }
 
@@ -123,6 +122,10 @@ nav .nav-list {
 }
 
 .about-us {
+  border: 1px solid transparent;
+  background-image: url(../images/IMG-0990.JPG);
+  background-position: center;
+  background-size: cover;
 }
 
 .about-us article {
@@ -161,6 +164,8 @@ nav .nav-list {
 
 .order-now {
   text-align: center;
+  background-color: rgb(238, 236, 236);
+  border: 1px solid rgb(238, 236, 236);
 }
 
 .order-now h2 {
@@ -176,14 +181,23 @@ nav .nav-list {
 }
 
 .order-now .nav-list {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
+  padding: unset;
+  margin: 0.8rem 0;
 }
 
 .order-now .nav-list .nav-item {
   padding: 1rem 2rem;
+  text-align: unset;
   font-size: 1.2rem;
-  margin: 0.8rem 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(130, 130, 130, 0.611);
+}
+
+.order-now .nav-list .nav-item:hover {
+  border-bottom: 2px solid #fd7e14;
+  color: #fd7e14;
 }
 
 .order-now > div {
@@ -197,11 +211,18 @@ nav .nav-list {
   height: 18rem;
   margin: 1rem;
   position: relative;
-  /* border: 2px solid red; */
+  overflow: hidden;
 }
 
-.meal figure:hover .figure-card {
-  display: flex;
+.order-now figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease-in 3s;
+}
+
+.meal figure:hover .meal-img {
+  transform: scale(1.3);
 }
 
 figure .figure-card {
@@ -210,17 +231,21 @@ figure .figure-card {
   background-color: rgba(0, 0, 0, 0.378);
   width: 100%;
   height: 100%;
-  top: 0;
+  bottom: 0;
+  right: 0;
   display: none;
   flex-direction: column;
   padding: 1rem;
+}
+
+.meal figure:hover .figure-card {
+  display: flex;
 }
 
 .figure-card span {
   text-align: right;
   align-self: flex-end;
   background-color: #fd7e14;
-  z-index: -1;
   color: white;
   padding: 0.25rem 1rem;
   border-radius: 30px;
@@ -237,7 +262,6 @@ figure .figure-card {
 }
 
 .figure-card div {
-  /* border: 2px solid blueviolet; */
 }
 
 .figure-card button {
@@ -278,6 +302,7 @@ figure .figure-card {
   margin: unset;
   margin-top: 7rem;
   font-size: 1.2rem;
+  color: #fd7e14;
 }
 
 .book-table h3 {
@@ -292,7 +317,8 @@ figure .figure-card {
 .book-table > p {
   margin: unset;
   padding: 1.3rem;
-  font-size: 2.3rem;
+  font-size: 2.8rem;
+  color: #fd7e14;
 }
 
 .book-table span {
@@ -342,6 +368,11 @@ figure .figure-card {
   margin: 1rem auto 7rem;
 }
 
+.book-table .book-table-carousel div img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .book-table-carousel .icon-left,
 .book-table-carousel .icon-right {
   position: absolute;
@@ -367,6 +398,7 @@ figure .figure-card {
   font-size: 1.3rem;
   margin: unset;
   margin-top: 5rem;
+  color: #fd7e14;
 }
 
 .testimonials h3 {
@@ -389,6 +421,12 @@ figure .figure-card {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials-list .user-profile img {
+  width: 100%;
+  transform: rotate(20deg);
 }
 
 .testimonials-list h4 {
@@ -399,7 +437,7 @@ figure .figure-card {
 .testimonials-list .user-position {
   margin: unset;
   font-size: 1.3rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .testimonials-list .rating-list {
