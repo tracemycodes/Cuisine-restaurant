@@ -1,0 +1,430 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  border: 2px solid green;
+}
+
+nav {
+  /* border: 2px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav > a img {
+  border: 2px solid rebeccapurple;
+  width: 7rem;
+}
+
+nav .nav-list {
+  display: flex;
+  margin: 0;
+  padding: 1.2rem 0;
+}
+
+.nav-list .nav-item {
+  margin: 0 1.2rem;
+  list-style: none;
+  height: 100%;
+}
+
+.nav-item a {
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  /* font-weight: bold; */
+}
+
+.landing-page {
+  height: calc(100vh);
+  position: relative;
+}
+
+.landing-page::after {
+  content: " ";
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 40%;
+  height: calc(100% + 3rem);
+  z-index: -1;
+  background-image: url(https://i.ibb.co/DgPp0gB/IMG-0982.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.landing-page article {
+  width: 60%;
+  height: 100%;
+}
+
+.landing-page h1 {
+  font-size: 5rem;
+  margin: 6.2rem 0 1rem 6.8rem;
+}
+
+.landing-page input {
+  margin: 0 0 1rem 6.8rem;
+  width: 57%;
+  padding: 1rem;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 10px 43px 19px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page select {
+  padding: 1rem;
+  background-color: #fd7e14;
+  color: white;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.landing-page .social-links {
+  display: flex;
+  margin-left: 6.8rem;
+}
+
+.social-links p {
+  margin-right: 5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.about-us {
+}
+
+.about-us article {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: 17%;
+}
+
+.about-us article h2 {
+  margin: 0;
+  margin-top: 5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fd7e14;
+}
+
+.about-us article h3 {
+  font-size: 4rem;
+  margin: unset;
+}
+
+.about-us article p {
+  font-size: 1.2rem;
+  margin: unset;
+  margin: 1rem 0;
+}
+
+.about-us article button {
+  padding: 0.8rem;
+  margin-bottom: 8rem;
+  background-color: #fd7e14;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.order-now {
+  text-align: center;
+}
+
+.order-now h2 {
+  font-size: 1.2rem;
+  color: #fd7e14;
+  margin: 0;
+  margin-top: 4.5rem;
+}
+
+.order-now h3 {
+  font-size: 4.5rem;
+  margin: 0;
+}
+
+.order-now .nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.order-now .nav-list .nav-item {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  margin: 0.8rem 0;
+}
+
+.order-now > div {
+  display: flex;
+  justify-content: center;
+}
+
+.order-now figure {
+  max-width: 16rem;
+  width: 100%;
+  height: 18rem;
+  margin: 1rem;
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.meal figure:hover .figure-card {
+  display: flex;
+}
+
+figure .figure-card {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.378);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.figure-card span {
+  text-align: right;
+  align-self: flex-end;
+  background-color: #fd7e14;
+  z-index: -1;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+}
+
+.figure-card h4 {
+  font-size: 2rem;
+  margin: unset;
+  margin: 2rem 0;
+}
+
+.figure-card p {
+  font-size: 1.4rem;
+}
+
+.figure-card div {
+  /* border: 2px solid blueviolet; */
+}
+
+.figure-card button {
+  border: none;
+  border-radius: 5px;
+  width: 7rem;
+  padding: 0.5rem 0.8rem;
+  margin: auto;
+  background-color: #fd7e14;
+  color: white;
+}
+
+.order-now .meal-carousel {
+  margin-top: 2.2rem;
+}
+
+.order-now .pagination-list {
+  display: flex;
+  margin: 3rem;
+  justify-content: center;
+}
+
+.pagination-list .pagination-item {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0.5rem;
+  border: 2px solid orange;
+  background-color: orange;
+  border-radius: 50%;
+  list-style: none;
+}
+
+.book-table {
+  text-align: center;
+}
+
+.book-table h2 {
+  margin: unset;
+  margin-top: 7rem;
+  font-size: 1.2rem;
+}
+
+.book-table h3 {
+  margin: unset;
+  margin-bottom: 3rem;
+  font-size: 4.5rem;
+}
+
+.book-table img {
+}
+
+.book-table > p {
+  margin: unset;
+  padding: 1.3rem;
+  font-size: 2.3rem;
+}
+
+.book-table span {
+  margin-top: 3rem;
+  display: block;
+  font-size: 1rem;
+}
+
+.book-table article {
+  display: inline-block;
+  max-width: 45rem;
+  width: 100%;
+  margin: auto;
+}
+
+.book-table .book-div-left {
+  float: left;
+}
+
+.book-table .book-div-right {
+  float: right;
+}
+
+.book-table div {
+  text-align: left;
+}
+
+.book-table p {
+  margin: unset;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.book-table .f-2 {
+  font-size: 1.8rem;
+}
+
+.book-table .book-table-carousel {
+  position: relative;
+}
+
+.book-table .book-table-carousel div {
+  width: 100%;
+  max-width: 52rem;
+  height: 31rem;
+  margin: 1rem auto 7rem;
+}
+
+.book-table-carousel .icon-left,
+.book-table-carousel .icon-right {
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+
+.book-table-carousel .icon-right {
+  right: 7rem;
+}
+
+.book-table-carousel .icon-left {
+  left: 7rem;
+}
+
+.testimonials {
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.3rem;
+  margin: unset;
+  margin-top: 5rem;
+}
+
+.testimonials h3 {
+  margin: unset;
+  font-size: 4.5rem;
+}
+
+.testimonials-slider {
+}
+
+.testimonials-slider .testimonials-list {
+  list-style: none;
+  max-width: 63rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.testimonials-list .user-profile {
+  margin: 1rem auto;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.testimonials-list h4 {
+  font-size: 2.2rem;
+  margin: unset;
+}
+
+.testimonials-list .user-position {
+  margin: unset;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.testimonials-list .rating-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials-list .rating-item {
+  margin: 1rem 0.7rem;
+}
+
+.testimonials-list .user-testimonials {
+  font-size: 1.6rem;
+  font-style: oblique;
+}
+
+.testimonials .pagination-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+footer {
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
